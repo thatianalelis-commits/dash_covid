@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1WJIjGoN7snDQQeHbJmdKJTBef8K5P9lX
 """
 
-!pip install -q streamlit
+
 
 import streamlit as st
 import pandas as pd
@@ -20,8 +20,8 @@ st.set_page_config(page_title='DashCovid', layout='wide')
 st.title('DashCovid: dados de Covid - Ano 2020')
 
 #acessar com Pandas os dados
-df=pd.read_csv('/content/WHO_time_series.csv')
-df.head()
+df=pd.read_csv('WHO_time_series.csv')
+
 
 fig1=px.line(df, x = 'Date_reported', y= 'Cumulative_cases', color='Country', title = 'Dados COVID no mundo')
 
